@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}  
+    <div class="container" id="articles-container">
+	<div class="card mb-3 box">
+            <div class="row">
+         {% for key,value in datacount %}
+        
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{key}} </h5>
+                        <p class="card-text"><strong>Count</strong>: {{value}}</p> 
+                    </div>
+                </div> 
+				<div class="col-md-3 text-center">
+				   <img src="{% static ''%}img/{{key}}.png" style="width: 100px;margin: 10px;">
+				</div> 
+        {% endfor %} 
+		  </div>  
+		</div>
+		<div class="card mb-3 box">
+		<div class="col-md-12">
+				   <h4>Confusion Matrix with normalize</h4>
+				    <p class="card-text"><strong>{{atypelabel}} accuracy</strong>: {{accuracy}}</p> 
+				   <img src="/static/confusion_matrix_with_normalize_{{atype}}.png"  style="width: auto;margin: 10px;">
+		</div>
+		</div> 
+    </div> 
+ {% endblock %}
+ {% block jsscript %}  
+ {% endblock %} 

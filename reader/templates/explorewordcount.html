@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}  
+    <div class="container" id="articles-container">
+         {% for key,value in datacount %}
+        <div class="card mb-3 box">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{key}} </h5>
+                        <p class="card-text"><strong>Count</strong>: {{value.total}}</p> 
+                    </div>
+                </div> 
+				<div class="col-md-4 text-center">
+				   <img src="{% static ''%}img/{{key}}.png" style="width: 100px;margin: 10px;">
+				</div>
+            </div> 
+			 <div class="row"> 
+		<div class="col-md-8"> 
+		 <h6>Word Count</h6>
+				   <img src="/static/{{key}}-wordcount.png"  style="width: auto;margin: 10px;">
+		</div> 
+		<div class="col-md-4 mt-4">
+		   <table>
+		     <thead>
+			   <tr><th>Word</th><th>Frequency</th></tr>
+			 </thead>
+			 <tbody>
+			 {% for v in value.frequency %}
+			   <tr><td>{{v.word}}</td><td>{{v.frequency}}</td></tr>
+			 {% endfor %}
+			 </tbody>
+		   </table>
+		</div>
+		</div>
+		</div> 
+        {% endfor %} 
+    </div> 
+ {% endblock %}
+ {% block jsscript %}  
+ {% endblock %} 

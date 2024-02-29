@@ -1,0 +1,24 @@
+<div class="sidebar">
+    <a href="{% url 'Home' %}">Home</a>  
+    <a href="/reuploadfile">Reupload Dataset</a>	
+	<a href="#">Explore</a>  
+	<ul>
+	  <li><a href="/explore-count">Count</a></li>
+	  <li><a href="/explore-word-cloud">Word Cloud</a></li>
+	  <li><a href="/explore-word-count">Word Count</a></li>
+	  <li><a href="#">Confusion matrix<br/>(without normalize)</a>
+	  <ul>
+	     <li><a href="/explore-confusion-matrix/lr">Logistic regression</a></li>
+		 <li><a href="/explore-confusion-matrix/dtc">Decision Tree Classifier</a></li>
+		 <li><a href="/explore-confusion-matrix/rfc">Random Forest Classifier</a></li>
+	  </ul>
+	  </li>
+ 	  <li><a href="#">Confusion matrix<br/>(with normalize)</a>
+	  <ul>
+	     <li><a href="/explore-confusion-matrix-normalize/lr">Logistic regression</a></li>
+		 <li><a href="/explore-confusion-matrix-normalize/dtc">Decision Tree Classifier</a></li>
+		 <li><a href="/explore-confusion-matrix-normalize/rfc">Random Forest Classifier</a></li>
+	  </ul>
+	  </li>
+    </ul>	
+</div> 

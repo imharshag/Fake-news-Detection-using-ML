@@ -1,0 +1,88 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}   
+    <div class="container" id="articles-container">
+	     <h2>Dataset File Re-upload</h2>
+<form id="upload_form" enctype="multipart/form-data" method="post">
+{% csrf_token %}
+  <input type="file" name="file1" id="file1" onchange="uploadFile()"><br>
+  <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+  <h3 id="status"></h3>
+  <p id="loaded_n_total"></p>
+</form>
+ </div>
+ <h5>Format of Data Sample</h5>
+<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">Click to expand/collapse table</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+		<table class="table">
+		<tr>
+    {% for k,v1 in head.0 %}
+       <th>{{k}}</th>
+	{% endfor %} 
+  </tr>
+{% for   v in head %}
+  <tr>
+    {% for k,v1 in v %}
+       <td>{{v1}}</td>
+	{% endfor %} 
+  </tr>
+{% endfor %} 
+    </table> 
+	</div>
+	</div>
+	</div>
+<br/>
+<br/>
+ {% endblock %} 
+ {% block jsscript %}
+ <script>
+ function _(el) {
+  return document.getElementById(el);
+}
+
+function uploadFile() {
+  var file = _("file1").files[0];
+  // alert(file.name+" | "+file.size+" | "+file.type);
+  var formdata = new FormData();
+  formdata.append("file1", file);
+  formdata.append("csrfmiddlewaretoken", $('[name=csrfmiddlewaretoken]').val());
+  var ajax = new XMLHttpRequest();
+  ajax.upload.addEventListener("progress", progressHandler, false);
+  ajax.addEventListener("load", completeHandler, false);
+  ajax.addEventListener("error", errorHandler, false);
+  ajax.addEventListener("abort", abortHandler, false);
+  ajax.open("POST", "/savefile");   
+  ajax.send(formdata);
+}
+
+function progressHandler(event) {
+  _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
+  var percent = (event.loaded / event.total) * 100;
+  _("progressBar").value = Math.round(percent);
+  _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+}
+
+function completeHandler(event) {
+    response=event.target.responseText;
+	response=JSON.parse(response);
+  _("status").innerHTML =response.message;
+  if(response.success)
+     document.location.href="/";
+  _("progressBar").value = 0; //wil clear progress bar after successful upload
+}
+
+function errorHandler(event) {
+  _("status").innerHTML = "Upload Failed";
+}
+
+function abortHandler(event) {
+  _("status").innerHTML = "Upload Aborted";
+}
+ </script>
+  {% endblock %} 

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fake news detection using machine learning</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/popper.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <style>
+  .card-body.FAKE::after{
+    content:" ";
+  } 
+  </style>
+</head>
+<body>
+<div class="row m-0"> 
+                <div class="col-md-3"> 
+        {% include 'sidebar.html' %}
+    </div>
+	 <div class="col-md-9"> 
+	  <h3>Fake news detection using machine learning</h3>
+     {% block content %}
+      {% endblock %} 
+	  </div> 
+</div>
+     {% block jsscript %} 
+{% endblock %}
+<style>
+    .sidebar{
+        position: static;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    .sidebar a{
+        width: 100%;
+        display: block;
+        margin: 24px 0px;
+        padding: 10px 5px;
+        font-weight: bolder;
+        font-size: large;
+        text-decoration: none;
+        background-color: #d9e4ffc7;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0px 0.5px 1px grey;
+        text-align: center;
+    }
+	.sidebar ul{
+	 list-style:none;
+	}
+	.search {
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 5px
+}
+
+.search-1 {
+    position: relative;
+    width: 100%
+}
+
+.search-1 input {
+    height: 45px;
+    border: none;
+    width: 100%;
+    padding-left: 34px;
+    padding-right: 10px;
+    border-right: 2px solid #eee
+}
+
+.search-1 input:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: none
+}
+
+.search-1 i {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    font-size: 24px;
+    color: #eee
+}
+
+::placeholder {
+    color: #eee;
+    opacity: 1
+}
+
+.search-2 {
+    position: relative;
+    width: 100%
+}
+
+.search-2 input {
+    height: 45px;
+    border: none;
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 100px
+}
+
+.search-2 input:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: none
+}
+
+.search-2 i {
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    font-size: 24px;
+    color: #eee
+}
+
+.search-2 button {
+    position: absolute;
+    right: 1px;
+    top: 0px;
+    border: none;
+    height: 45px;
+    background-color: red;
+    color: #fff;
+    width: 90px;
+    border-radius: 4px
+}
+
+@media (max-width:800px) {
+    .search-1 input {
+        border-right: none;
+        border-bottom: 1px solid #eee
+    }
+
+    .search-2 i {
+        left: 4px
+    }
+
+    .search-2 input {
+        padding-left: 34px
+    }
+
+    .search-2 button {
+        height: 37px;
+        top: 5px
+    }
+}
+</style>
+</body>
+</html>

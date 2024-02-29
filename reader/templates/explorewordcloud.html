@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}  
+    <div class="container" id="articles-container">
+         {% for key,value in datacount %}
+        <div class="card mb-3 box">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{key}} </h5>
+                        <p class="card-text"><strong>Count</strong>: {{value}}</p> 
+                    </div>
+                </div> 
+				<div class="col-md-4 text-center">
+				   <img src="{% static ''%}img/{{key}}.png" style="width: 100px;margin: 10px;">
+				</div>
+            </div> 
+		<div class="col-md-12">
+				   <h6>Word Cloud</h6>
+				   <img src="/static/{{key}}-wordcloud.png"  style="width: auto;margin: 10px;">
+		</div>
+		</div>
+        {% endfor %} 
+    </div> 
+ {% endblock %}
+ {% block jsscript %}  
+ {% endblock %} 
