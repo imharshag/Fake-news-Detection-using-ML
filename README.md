@@ -15,7 +15,6 @@ Project reports and related [documents📄](https://drive.google.com/file/d/1LQZ
 
 
 ***Technologies Used:***
-- Windows 7/8/10 💻
 - HTML/CSS 🌐
 - JavaScript ⚙️
 - Python 🐍
