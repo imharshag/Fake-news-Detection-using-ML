@@ -27,7 +27,7 @@ Project reports and related [documents📄](https://drive.google.com/file/d/1LQZ
 
 ***Contact Information 📧***
 
-For inquiries or feedback, please contact **[Harsha G](mailto:harshag3103@gmail.com)**
+For inquiries or feedback, please contact **[Harsha G](mailto:harshag3106@gmail.com)**
 
 ***Conclusion:***
 
