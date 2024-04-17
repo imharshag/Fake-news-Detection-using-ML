@@ -19,8 +19,6 @@ Project reports and related [documents📄](https://drive.google.com/file/d/1LQZ
 - JavaScript ⚙️
 - Python 🐍
 - Django 🕸️
-- Dataset 📊
-- Jupyter Notebook 📓
 
 **Institution Information:**
 - Department of Computer Science & Engineering, JSSP, Mysuru
