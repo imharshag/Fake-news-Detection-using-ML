@@ -4,11 +4,15 @@
 
 📰🚫 Fake news is a significant issue in today's digital landscape. This project aims to tackle this problem by developing a system that can effectively detect fake news using machine learning techniques.
 
+<br>
+
+![Fake News Detection](https://harsha-g.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FFakeNewsDetectionusingMachineLearning.fbe6865a.png&w=1080&q=75)
 
 ***Document📁:***
 
-Project reports and related [documents📄](https://drive.google.com/file/d/1LQZDPBiEmd4aYmmc1j1u7ksAM-XfVGhB/view?usp=drive_link)
+Project results and related [documents📄](https://drive.google.com/file/d/1LQZDPBiEmd4aYmmc1j1u7ksAM-XfVGhB/view?usp=drive_link)
 
+<br>
 
 ***Technologies Used:***
 - HTML/CSS 🌐
@@ -16,8 +20,8 @@ Project reports and related [documents📄](https://drive.google.com/file/d/1LQZ
 - Python 🐍
 - Django 🕸️
 
-**Institution Information:**
-- Department of Computer Science & Engineering, JSSP, Mysuru
+<br>
+
 
 ***Contact Information 📧***
 
