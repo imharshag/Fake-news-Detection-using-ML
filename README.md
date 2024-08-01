@@ -4,7 +4,7 @@
 
 📰🚫 Fake news is a significant issue in today's digital landscape. This project aims to tackle this problem by developing a system that can effectively detect fake news using machine learning techniques.
 
-![Fake News Detection](https://harsha-g.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FFakeNewsDetectionusingMachineLearning.fbe6865a.png&w=1080&q=75)
+![Fake News Detection](https://harshag.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FFake_News_Detection_using_Machine_Learning.fbe6865a.png&w=1080&q=75)
 
 ### Key Features
 
